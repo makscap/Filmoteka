@@ -6,19 +6,21 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "server": "json-server --watch db.json -p 4040 -d 300"
+    "server": "json-server --watch db.json -p 4040 -d 300",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxplanjay/js-22.git"
+    "url": "git+https://github.com/makscap/Filmoteka.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Elena Alisova <elenie@ukr.net>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luxplanjay/js-22/issues"
+    "url": "https://github.com/makscap/Filmoteka/issues"
   },
-  "homepage": "https://github.com/luxplanjay/js-22#readme",
+  "homepage": "https://makscap.github.io/Filmoteka",
   "devDependencies": {
     "json-server": "^0.16.2",
     "parcel-bundler": "^1.12.4",
@@ -26,6 +28,7 @@
     "parcel-plugin-nuke-dist": "^1.0.1"
   },
   "dependencies": {
-    "infinite-scroll": "^3.0.6"
+    "gh-pages": "^3.1.0",
+    "sass": "^1.29.0"
   }
 }
