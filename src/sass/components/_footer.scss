@@ -10,7 +10,12 @@
   .footer-copy {
     margin: 0px;
     font-size: 16px;
-    line-height: 0.84;
+    line-height: 1.19;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
 
   .icon-heart {
@@ -18,4 +23,8 @@
   height: 13px;
   margin-left: 10px;
   margin-right: 10px;
+  }
+
+  .footer-link {
+    text-decoration: none;
   }
