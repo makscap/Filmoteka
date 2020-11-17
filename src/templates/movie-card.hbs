@@ -1,12 +1,17 @@
 {{#each this}}
-  <li>
-    <a href="{{url}}" target="_blank" rel="noopener noreferrer">
-      <article>
-        <img src="{{urlToImage}}" alt="" width="480">
-        <h2>{{title}}</h2>
-        <p>Posted by: {{author}}</p>
-        <p>{{description}}</p>
-      </article>
-    </a>
-  </li>
+<li class="card-content">
+  <a href="{{homepage}}" rel="noopener noreferrer">
+    <article>
+      <img class="card-image" src="{{poster_path}}" alt="{{title}} movie poster" width="274">
+      <h2 class="card-title">{{title}}</h2>
+      <ul class="card-text">
+        {{#each genres}}
+        <li class="card-text__genre">{{name}}</li>
+        {{/each}}
+        <li class="card-text__data">| {{release_date}}</li>
+        <li>{{vote_average}}</li>
+      </ul>
+    </article>
+  </a>
+</li>
 {{/each}}

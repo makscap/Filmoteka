@@ -1,0 +1,27 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// ДОбавляет точки перелома
+@import './utils/breakpoints';
+
+// Добавляет общие стили и переменные
+@import './variables';
+@import './components/common';
+
+// Добавляет обнуление
+@import './base/nullifier';
+
+// Добавляет плейсхолдеры
+// @import './utils/placeholders';
+
+// добавляет модуль хедера
+@import './components/page-header/header-home';
+@import './components/page-header/header-library';
+
+//добавляет стили основного контейнера
+@import './components/main-container';
+
+// добавляет стили футера
+@import './components/page-footer';

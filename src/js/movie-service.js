@@ -1,45 +1,14 @@
-// const API_KEY = 'bb47a995514a49758140b073ef1103f5';
-// const BASE_URL = 'https://newsapi.org/v2';
-// const options = {
-//   headers: {
-//     Authorization: API_KEY,
-//   },
-// };
+//Example API Request
+//https://api.themoviedb.org/3/movie/550?api_key=6914e86918040074e2fe382ba8e8cb5e
 
-// export default class NewsApiService {
-//   constructor() {
-//     this.searchQuery = '';
-//     this.page = 1;
-//   }
+const API_KEY = 'bb47a995514a49758140b073ef1103f5';
+const BASE_URL = 'https://developers.themoviedb.org/3';
 
-//   fetchArticles() {
-//     const searchParams = new URLSearchParams({
-//       q: this.searchQuery,
-//       language: 'en',
-//       pageSize: 10,
-//       page: this.page,
-//     });
-//     const url = `${BASE_URL}/everything?${searchParams}`;
-//     // const url = `${BASE_URL}/everything?q=${this.searchQuery}&language=en&pageSize=10&page=${this.page}`;
-
-//     return fetch(url, options)
-//       .then(response => response.json())
-//       .then(({ articles }) => articles);
-//   }
-
-//   incrementPage() {
-//     this.page += 1;
-//   }
-
-//   resetPage() {
-//     this.page = 1;
-//   }
-
-//   get query() {
-//     return this.searchQuery;
-//   }
-
-//   set query(newQuery) {
-//     this.searchQuery = newQuery;
-//   }
-// }
+export default async (name, page) => {
+	try {
+		const db = await fetch(`${BASE_URL}/trending/all/week?api_key=${API_KEY}`);
+		return db.json();
+	} catch (error) {
+		return error;
+	}
+}
