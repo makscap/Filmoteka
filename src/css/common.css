@@ -16,3 +16,17 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
