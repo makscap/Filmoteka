@@ -1,6 +1,6 @@
-// import ???? from '../templates/????.hbs'
+import moviesList from '../templates/movies-list.hbs'
 const searchForm = document.querySelector('#searchForm');
-const moviesContainer = document.querySelector('#moviesContainer');
+const moviesContainer = document.querySelector('.js-movies-container');
 
 searchForm.addEventListener('submit', onSearch)
 
@@ -14,13 +14,13 @@ function onSearch(e) {
 
       const response = await fetch(url);
       const dataMovies = await response.json();
-      return listMuviesMarkup(dataMovies);
+      return listMoviesMarkup(dataMovies);
     }
   catch (error) {
     console.log('Error');
   }
 }
 
-function listMuviesMarkup(muvies) {
-  // moviesContainer.insertAdjacentHTML('beforeend', ???(muvies));
+function listMoviesMarkup(movies) {
+  moviesContainer.insertAdjacentHTML('beforeend', moviesList(movies));
 }
