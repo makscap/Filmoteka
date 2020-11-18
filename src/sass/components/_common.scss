@@ -1,3 +1,18 @@
+
+body {
+  background-color: $background-primary-color;
+  color: $primary-text-color;
+  font-family: $main-font;
+  font-weight: 500;
+}
+
+/* здесь храним стили для сброса стилей элемента */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
