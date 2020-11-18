@@ -10,7 +10,7 @@ function onSearch(e) {
 
     try {
     const searchQuery = e.currentTarget.elements.query.value;
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=bb47a995514a49758140b073ef1103f5&language=en-US&query=${searchQuery}&page=1&include_adult=false`
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=b4c2f63def68e49abedf5a34ac5e443b&language=en-US&query=${searchQuery}&page=1&include_adult=false`
 
       const response = await fetch(url);
       const dataMovies = await response.json();
