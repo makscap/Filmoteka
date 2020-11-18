@@ -10,6 +10,8 @@
 @import './utils/variables';
 @import './components/common';
 
+@import './components/spin';
+
 // Добавляет обнуление
 @import './base/nullifier';
 
@@ -22,6 +24,7 @@
 
 //добавляет стили основного контейнера
 @import './components/main-container';
+@import './components/movies-list';
 
 // добавляет стили футера
 @import './components/footer';
