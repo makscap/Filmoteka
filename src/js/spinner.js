@@ -27,7 +27,7 @@ export function startSpinner () {
     const spinner = new Spinner(opts).spin(target);
 }
 export function stopSpinner () {
-    spinner.stop();
+    stop();
 }
 
 // Для включения и остановки спинера вызвать эти функции:
