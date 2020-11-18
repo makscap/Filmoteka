@@ -1,7 +1,5 @@
-// const API_KEY = 'bb47a995514a49758140b073ef1103f5';
-// const BASE_URL = 'https://developers.themoviedb.org/3';
 
-import moviePosterTpl from '../templates/movie-card.hbs';
+import moviePosterTpl from '../templates/movies-list.hbs';
 import apiService from './api-service';
 
 const refs = {
