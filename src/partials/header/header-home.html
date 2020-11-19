@@ -1,23 +1,25 @@
 
 <header class="overlay">
     <div class="header-container header-section">
-      <nav class="main-nav">
-        <a href="#" class="logo link"><!-- <span><svg class="">
+    <nav class="main-nav">
+        <a href="#" class="logo link"><svg width="24" height="24" class="film-icon">
           <use href="./images/sprite.svg#icon-film"></use>
-        </svg> --></span>Filmoteka</a>
+        </svg><span class="logo-word">Filmoteka</span></a>
         <ul class="site-nav list">
           <li class="item"><a href="#" class="link current">HOME</a></li>
           <li class="item">
-            <a href="./my-library.html" class="link">MY LIBRARY</a>
+            <a href="../src/my-library.html" class="link">MY LIBRARY</a>
           </li>
         </ul>
       </nav>
       
       <form class="form-search">
-          <label><input type="search" name="search" placeholder="Поиск фильмов" class="input-search" id="searchForm"></label>
-          <!-- <span><svg class="">
-            <use href="./images/sprite.svg#icon-search"></use>
-          </svg></span> -->
+          <label class="label-search"><input type="text" name="query" placeholder="Поиск фильмов" class="input-search" id="searchForm">
+          <svg width="12" height="12" class="search-icon">
+            <use
+              href="./images/sprite.svg#icon-search"
+            ></use>
+          </svg></label>
       </form>
    </div>   
 </header>
