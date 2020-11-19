@@ -1,18 +1,26 @@
 
 import moviePosterTpl from '../templates/movies-list.hbs';
-import apiService from './api-service';
+import NewsApiService from './api-service';
 
-const refs = {
-  moviesContainer: document.querySelector('.js-card'),
-};
-const newApiService = new apiService();
+
+const listElement = document.querySelector('.js-movies-container');
+
+const newApiService = new NewsApiService();
 
 render();
 
+// рендер первой страницы
 function render() {
-  newApiService.fetchTrendingMovies().then(renderMoviesCard);
+  newApiService
+    .insertGenresOfMovie()
+    .then(renderMoviesCard)
+    .catch(err => {
+      console.log('error render');
+    });
 }
 
+// для разметки
 function renderMoviesCard(articles) {
-    refs.moviesContainer.insertAdjacentHTML('beforeend', moviePosterTpl(articles));
+  listElement.innerHTML = moviePosterTpl(articles);
 }
+
