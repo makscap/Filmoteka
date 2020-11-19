@@ -10,14 +10,17 @@
     refs.closeModalBtn.addEventListener("click", toggleModal);
     refs.backdrop.addEventListener("click", onCloseModalOnOverlay);
 
+
     function toggleModal() {
-      document.addEventListener("keydown", onCloseModalByEsc);
       refs.modal.classList.toggle("is-hidden");
+      document.addEventListener("keydown", onCloseModalByEsc);
+
     }
 
     function onCloseModalByEsc (event) {
       if (event.code === "Escape") {
         toggleModal();
+        document.removeEventListener("keydown", onCloseModalByEsc);
       }
     }
 
