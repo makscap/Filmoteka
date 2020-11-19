@@ -3,6 +3,7 @@ import "./js/modal-footer"
 import "./js/search-movies";
 import './js/spinner';
 import { startSpinner, stopSpinner } from './js/spinner';
+import './js/modal';
 
 // чтобы увидеть спиннер - установи пакет spin.js
 
