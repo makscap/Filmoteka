@@ -1,14 +1,20 @@
-<article>
-    <img class="card-image" src="{{poster_path}}" alt="{{original_title}} movie poster" width="274">
-    <h2 class="card-title">{{original_title}}</h2>
-    <ul class="card-list">
-        <li><span>Vote / Votes</span><span class="vote">{{vote_average}}</span class="votes"> /
-            <span>{{vote_count}}</span></li>
-        <li><span>Popularity</span>{{popularity}}</li>
-        <li><span>Original Title</span>{{original_title}}</li>
-        {{#each genres}}
-        <li><span>Genre</span>{{genre_ids}}</li>
-        {{/each}}
-    </ul>
-    <p class="card-text"><span>About</span>{{overview}}</p>
+<article class="modal-section-card">
+    <img class="modal-card-image" src="{{poster_path}}" alt="{{original_title}} movie poster" width="274">
+    <div class="card-list-wrapper">
+        <h2 class="modal-card-title">{{original_title}}</h2>
+        <ul class="modal-card-list">
+            <li>Vote / Votes<span class="modal-vote">{{vote_average}}</span> /
+                <span class="modal-votes">{{vote_count}}</span></li>
+            <li>Popularity<span class="modal-text-popularity">{{popularity}}</span></li>
+            <li>Original Title<span class="modal-text-title">{{original_title}}</span></li>
+            {{#each genres}}
+            <li>Genre<span class="modal-genre">{{genre_ids}}</span></li>
+            {{/each}}
+        </ul>
+        <p class="modal-text-title">About<span class="modal-card-text">{{overview}}</span></p>
+        <div class="modal-btn">
+            <button class="modal-button">Watched</button>
+            <button class="modal-button">queue</button>
+        </div>
+    </div>
 </article>
