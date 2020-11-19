@@ -1,5 +1,6 @@
 import "./sass/main.scss";
 import './js/spinner';
+import "./js/search-movies";
 
 import { startSpinner, stopSpinner } from './js/spinner';
 
