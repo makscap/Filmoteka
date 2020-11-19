@@ -4,7 +4,6 @@ const moviesContainer = document.querySelector('.js-movies-container');
 
 searchForm.addEventListener('submit', onSearch)
 
-
 function onSearch(e) {
     e.preventDefault();
 
