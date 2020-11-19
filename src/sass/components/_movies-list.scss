@@ -1,0 +1,56 @@
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -15px;
+}
+
+.movies-item {
+  max-width: 294px;
+  margin: 15px;
+}
+
+.movies-poster {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+// .movies-image{}
+
+.info-title {
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.02em;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.info-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.02em;
+  font-family: 'Roboto', sans-serif;
+  color: #ff6b08;
+}
+
+.info-text__genre {
+  margin-right: 10px;
+}
+
+.info-text__rating {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 36px;
+  height: 16px;
+  background-color: #ff6b08;
+  border-radius: 5px;
+  line-height: 1.16667;
+  color: #ffffff;
+}
