@@ -19,9 +19,9 @@ export default class apiService {
   async onFetch(url) {
   try {
       const response = await fetch(url);
-    const results = await response.json();
+    const data = await response.json();
     
-      return results;
+      return data.results;
     } catch (err) {
       return console.log('Some error in fetch');
     }
