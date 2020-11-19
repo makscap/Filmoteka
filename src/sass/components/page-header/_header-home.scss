@@ -74,6 +74,7 @@ input::placeholder{
 }
 
 .logo.link {
+    font-family: $main-font;
     display: flex;
     align-items: baseline;
    color: $white-text-color;
@@ -144,9 +145,10 @@ input::placeholder{
         margin-right: 15px;
     }
 }
-.header-button:hover, .header-button:focus {
+.header-button:focus {
     background-color: $button-bg-color;
-    border: $button-bg-color;
+    border-color: $button-bg-color; 
+    outline: none;
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
