@@ -1,13 +1,13 @@
 import NewsApiService from './api-service';
 import moviesList from '../templates/movies-list.hbs';
-
+import debounce from 'lodash.debounce';
 
 const searchForm = document.querySelector('#searchForm');
 const moviesContainer = document.querySelector('.js-movies-container');
 
 const newApiService = new NewsApiService();
 
-searchForm.addEventListener('input', onSearch);
+searchForm.addEventListener('input', debounce(onSearch, 2000));
 
 function onSearch(e) {
     e.preventDefault();
