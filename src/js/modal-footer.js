@@ -7,26 +7,30 @@
     };
   
     refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", onCloseModal);
     refs.backdrop.addEventListener("click", onCloseModalOnOverlay);
 
 
     function toggleModal() {
       refs.modal.classList.toggle("is-hidden");
       document.addEventListener("keydown", onCloseModalByEsc);
+    }
 
+
+    function onCloseModal() {
+      document.removeEventListener("keydown", onCloseModalByEsc);
+      refs.modal.classList.toggle("is-hidden");
     }
 
     function onCloseModalByEsc (event) {
       if (event.code === "Escape") {
-        toggleModal();
-        document.removeEventListener("keydown", onCloseModalByEsc);
+        onCloseModal();
       }
     }
 
     function onCloseModalOnOverlay (event) {
       if (event.currentTarget === event.target) {
-        toggleModal();
+        onCloseModal();
   }
 }
   })();
