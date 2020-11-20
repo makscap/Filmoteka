@@ -148,7 +148,7 @@
 .social {
 
   display: flex;
-          justify-content: space-evenly;
+          justify-content: center;
           padding-bottom: 10px;
 }
 
@@ -166,7 +166,7 @@
 
 .social__link:hover, .social__link:focus {
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: #f3bb21;
 }
 
 .svg-insta {
