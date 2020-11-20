@@ -796,9 +796,9 @@ input::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 10px;
 }
 
@@ -824,7 +824,7 @@ input::placeholder {
 
 .social__link:hover, .social__link:focus {
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: #f3bb21;
 }
 
 .svg-insta {
