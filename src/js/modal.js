@@ -3,14 +3,15 @@ import 'basiclightbox/dist/basicLightbox.min.css';
 
 import modalCard from '../templates/modal.hbs';
 
-const API_KEY = 'b4c2f63def68e49abedf5a34ac5e443b';
+const apiKey = 'b4c2f63def68e49abedf5a34ac5e443b';
 
-const cardFilm = document.querySelector(".modal-container");
+const cardFilm = document.querySelector(".movies-list");
+console.log(cardFilm)
 cardFilm.addEventListener('click', openModal);
 
 
 function fetchOneMovieInfo(movie_id) {
-  const url = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}`;
+  const url = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}`;
   return fetch(url).then(response => response.json());
 }
 
