@@ -1,10 +1,13 @@
 <header class="madal-header">
     <div class="modal-container">
-<a href="">
-    <svg width="70" height="60"></svg>
+        <div class="header-modal-section">
+            <nav class="modal-navigation"></nav>
+<a href="" class="logo-navigation">
+<svg class="logo-film" width="24" height="24">
+            <use href="./images/sprite.svg#icon-film"></use>
+        </svg>
     <span class="modal-logo-text">Filmoteka</span>
 </a>
-<nav class="modal-navigation">
     <ul class="navigation-list">
         <li class="navigation-item"><a href="">Home</a></li>
         <li class="navigation-item"><a href="">my library</a></li>
@@ -14,28 +17,21 @@
 <button>Watched</button>
 <button>queue</button>
 </div>
+</div>
     </div>
 </header>
 <body>
-    <div class="modal-container">
-    <div class="modal-card-container">  
+    <div class="modal-container">  
         <!--сюда добавляем карточку одного фильма -->
     </div>
-    <div class="modal-btn">
-        <button>Watched</button>
-        <button>queue</button>
-    </div>
-    </div>
 </body>
-<footer>
-    <div class="modal-container">
-        <div class="modal-footer">
-            <p class="copyright">&copy; 2020 | All Rights Reserved |&nbsp; </p>
-            <div class=developers>
-                <p>Developed with</p>
-                <svg></svg>
-                <p>by GoIT Students</p>
-            </div>
-        </div>
+<footer class="footer">
+    <div class="footer-copy">
+        <span>&copy; 2020 | All Rights Reserved | Developed with</span>
+        <svg class="icon-heart">
+            <use href="./images/sprite.svg#icon-heart"></use>
+        </svg>
+        <span>by <a class="footer-link" href="#">GoIT Students</a></span>
     </div>
+
 </footer>
