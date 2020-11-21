@@ -17,8 +17,8 @@ function render() {
     .catch(err => {
       console.log('error render');
     });
+}
 
-    // для разметки
 function renderMoviesCard(articles) {
   listElement.innerHTML = moviePosterTpl(articles);
 }
