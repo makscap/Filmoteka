@@ -1,8 +1,6 @@
 import moviePosterTpl from '../templates/movies-list.hbs';
 import NewsApiService from './api-service';
 
-
-
 const listElement = document.querySelector('.js-movies-container');
 
 const newApiService = new NewsApiService();
@@ -17,10 +15,8 @@ function render() {
     .catch(err => {
       console.log('error render');
     });
-}
 
 function renderMoviesCard(articles) {
   listElement.innerHTML = moviePosterTpl(articles);
 }
-
-
+}
