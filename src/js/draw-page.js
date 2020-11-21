@@ -1,6 +1,6 @@
-
 import moviePosterTpl from '../templates/movies-list.hbs';
 import NewsApiService from './api-service';
+
 
 
 const listElement = document.querySelector('.js-movies-container');
@@ -19,8 +19,8 @@ function render() {
     });
 }
 
-// для разметки
 function renderMoviesCard(articles) {
   listElement.innerHTML = moviePosterTpl(articles);
+}
 }
 
