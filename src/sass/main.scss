@@ -3,6 +3,8 @@
  * Все паршалы подключаются сюда.
  */
 
+ @import 'basiclightbox/dist/basicLightbox.min.css';
+
 // ДОбавляет точки перелома
 @import './utils/breakpoints';
 
@@ -35,4 +37,4 @@
 // Добавляет стили на модалку
 @import './components/modal';
 
-@import 'basiclightbox/dist/basicLightbox.min.css';
+
