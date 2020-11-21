@@ -1,22 +1,28 @@
 import NewsApiService from './api-service';
 import moviesList from '../templates/movies-list.hbs';
-
+import debounce from 'lodash.debounce';
+import loaderToggle from './loader';
 
 const searchForm = document.querySelector('#searchForm');
 const moviesContainer = document.querySelector('.js-movies-container');
 
 const newApiService = new NewsApiService();
 
-searchForm.addEventListener('input', onSearch);
+searchForm.addEventListener('input', debounce(onSearch, 4000));
 
 function onSearch(e) {
     e.preventDefault();
 
   newApiService.query = e.target.value;
     if (newApiService.query !== '') {
+        loaderToggle();
         newApiService.insertSearchGenresOfMovie()
-            .then(renderMoviesCard);
-    } else {
+            .then(films => {
+                loaderToggle();
+                renderMoviesCard(films);
+            })
+    }
+     else {
         clearMarkup();
     };
 };
