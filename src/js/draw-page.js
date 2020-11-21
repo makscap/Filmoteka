@@ -17,10 +17,11 @@ function render() {
     .catch(err => {
       console.log('error render');
     });
-}
+
 
 function renderMoviesCard(articles) {
   listElement.innerHTML = moviePosterTpl(articles);
 }
-}
 
+
+}
