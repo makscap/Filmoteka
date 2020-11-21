@@ -1,22 +1,31 @@
 import Pagination from "tui-pagination";
-import NewsApiService from './api-service';
+
 const container = document.getElementById('tui-pagination-container');
 
-const apiService = new NewsApiService();
+export default function runPaginator(self) { 
+    if (!container) { 
+        console.log('Error! Pagination container is not fined');
+        return 0;
+    }
+    const { total_pages, total_results, page, lastMethod} = self;
 
-// const getFilms = apiService.insertSearchGenresOfMovie().then((res) => { 
-//     console.log(res);
-// });
-const paginatorOptions = {
-    totalItems: 100,
-    itemsPerPage: 20,
-    visiblePages: 10,
-    centerAlign: true,
-    totalPage: 5,
+    const paginatorOptions = {
+        totalItems: total_results,
+        itemsPerPage: 20,
+        visiblePages: 5,
+        page: page,
+        centerAlign: true,
+        totalPage: total_pages,
+    }
+    const Paginator = new Pagination(container, paginatorOptions);
+    
+    Paginator.on('beforeMove', e => {
+        self.page = e.page;
+        lastMethod();
+    });
+
+
+    return Paginator;
 }
-
-const newPagination = new Pagination(container, paginatorOptions);
- 
-newPagination.getCurrentPage();
 
   

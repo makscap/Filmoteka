@@ -13,7 +13,8 @@ searchForm.addEventListener('input', debounce(onSearch, 4000));
 function onSearch(e) {
     e.preventDefault();
 
-  newApiService.query = e.target.value;
+    newApiService.query = e.target.value;
+    newApiService.lastMethodCall = onSearch;
     if (newApiService.query !== '') {
         loaderToggle();
         newApiService.insertSearchGenresOfMovie()
