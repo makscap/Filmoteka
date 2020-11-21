@@ -19,8 +19,8 @@ function render() {
     });
 }
 
-// для разметки
 function renderMoviesCard(articles) {
   listElement.innerHTML = moviePosterTpl(articles);
+}
 }
 
