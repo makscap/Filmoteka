@@ -22,5 +22,5 @@ function render() {
 function renderMoviesCard(articles) {
   listElement.innerHTML = moviePosterTpl(articles);
 }
-}
+
 
