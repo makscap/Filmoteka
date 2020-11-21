@@ -1,24 +1,26 @@
 const API_KEY = 'b4c2f63def68e49abedf5a34ac5e443b';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
+import Paginator from './paginator'; 
 
 export default class NewsApiService {
   constructor() {
     this.searchQuery = '';
     this.page = 1;
     this.results = []
-    this.total_page = 0;
-    this.total_result = 0;
+    this.total_pages = 0;
+    this.total_results = 0;
+    this.lastMethod = () => { };
   }
   fetchPopularArticles() {
     const url = `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.page}`;
     return fetch(url)
       .then(response => response.json())
-      .then(({ total_result, total_page, results }) => {
+      .then(({ total_results, total_pages, results }) => {
         this.results = results;
-        this.total_page = total_page;
-        this.total_result = total_result;
-        
+        this.total_pages = total_pages;
+        this.total_results = total_results;
+        Paginator(this);
         return results;
       });
   }
@@ -26,11 +28,12 @@ export default class NewsApiService {
     const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&page=${this.page}&query=${this.searchQuery}`;
     return fetch(url)
       .then(response => response.json())
-      .then(({ total_result, total_page, results }) => {
+      .then(({ total_results, total_pages, results }) => {
         this.results = results;
-        this.total_page = total_page;
-        this.total_result = total_result;
-        
+        this.total_pages = total_pages;
+        this.total_results = total_results;
+  
+        Paginator(this);
         return results;
       });
   }
@@ -94,7 +97,12 @@ insertSearchGenresOfMovie() {
   set query(newQuery) {
     this.searchQuery = newQuery;
   }
-
+  set lastMethodCall(link) {
+    this.lastMethod = link;
+  }
+  get lastMethodCall() {
+    return this.lastMethod;
+  }
   incrementPage() {
     this.page += 1;
   }

@@ -9,11 +9,12 @@ render();
 
 // рендер первой страницы
 function render() {
+  newApiService.lastMethodCall = render;
   newApiService
     .insertGenresOfMovie()
     .then(renderMoviesCard)
     .catch(err => {
-      console.log('error render');
+      console.log(`error render: ${err}`);
     });
 
 function renderMoviesCard(articles) {

@@ -36,13 +36,13 @@
   display: inline-block;
   position: relative;
   width: 40px;
-  padding: 12px 0 6px;
+  line-height: 40px;
   margin-left: 0;
   color: #333;
   font-size: 12px;
   font-weight: normal;
   /* line-height: 1; */
-  height: 22px;
+  height: 40px;
   text-decoration: none;
   vertical-align: middle;
   border-radius: 5px;
@@ -160,6 +160,7 @@
   /* background: #fff; */
   cursor: default;
   pointer-events: none;
+  opacity: 0;
 }
 
 .tui-pagination .tui-is-disabled:hover {
