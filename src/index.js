@@ -1,3 +1,4 @@
+
 import "./sass/main.scss";
 import "./js/modal-footer"
 import "./js/search-movies";
@@ -11,3 +12,4 @@ import "./js/draw-page";
 //если бесит спиннер - закомментируй)
  startSpinner();
 // stopSpinner();
+
