@@ -46,6 +46,8 @@
 }
 .search-icon {
     display: block;
+    background-color: transparent;
+    border: none;
 }
 .input-search {
     font-family: $main-font;
@@ -81,6 +83,7 @@ input::placeholder{
     font-size: 30px;
     line-height: 1.17;
 }
+
 @media screen and (max-width: 767px){
     .logo-word {
     display: none;
@@ -91,7 +94,11 @@ input::placeholder{
 }
 .label-search {
     display: flex;
-   
+    align-items: baseline;
+}
+.btn-search-icon {
+    background-color: transparent;
+    border: none;
 }
 .header-section{
   
