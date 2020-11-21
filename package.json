@@ -35,7 +35,6 @@
     "gh-pages": "^3.1.0",
     "lodash.debounce": "^4.0.8",
     "sass": "^1.29.0",
-    "spin.js": "^4.1.0",
     "tui-pagination": "^3.4.0"
   }
 }
