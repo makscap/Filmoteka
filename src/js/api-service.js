@@ -6,12 +6,19 @@ export default class NewsApiService {
   constructor() {
     this.searchQuery = '';
     this.page = 1;
+    this.results = []
+    this.total_page = 0;
+    this.total_result = 0;
   }
   fetchPopularArticles() {
     const url = `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.page}`;
     return fetch(url)
       .then(response => response.json())
-      .then(({ results }) => {
+      .then(({ total_result, total_page, results }) => {
+        this.results = results;
+        this.total_page = total_page;
+        this.total_result = total_result;
+        
         return results;
       });
   }
@@ -19,7 +26,11 @@ export default class NewsApiService {
     const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&page=${this.page}&query=${this.searchQuery}`;
     return fetch(url)
       .then(response => response.json())
-      .then(({ results }) => {
+      .then(({ total_result, total_page, results }) => {
+        this.results = results;
+        this.total_page = total_page;
+        this.total_result = total_result;
+        
         return results;
       });
   }
