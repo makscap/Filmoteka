@@ -11,12 +11,38 @@
 }
 
 .movies-poster {
+  position: relative;
   margin-bottom: 10px;
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
+
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    opacity: 0.5;
+    transform: scale(1.01);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+
+    &:after {
+      visibility: visible;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 52px;
+    height: 35px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
-// .movies-image{}
 
 .info-title {
   margin-bottom: 2px;
@@ -39,7 +65,7 @@
 }
 
 .info-text__genre {
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .info-text__rating {
@@ -54,3 +80,13 @@
   line-height: 1.16667;
   color: #ffffff;
 }
+// .info-msg {
+//   text-align: center;
+//   color: $notify-text-color;
+//   @include font(400, 20px, 1.17, 0.02em, $basic-font);
+
+//   img {
+//     margin-bottom: 20px;
+//     border-radius: 5px;
+//   }
+// }

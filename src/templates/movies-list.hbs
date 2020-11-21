@@ -1,27 +1,3 @@
-{{!-- {{#each this}}
-<li class="movies-item">
-  <a href="{{homepage}}" rel="noopener noreferrer">
-    <article>
-      <div class="movies-poster">
-        <img class="movies-image" src="{{poster_path}}" alt="{{title}} movie poster" width="274">
-      </div>
-      <div class="info">
-        <h2 class="info-title">{{title}}</h2>
-        <ul class="info-text">
-          {{#each genres}}
-          <li class="info-text__genre">{{name}}</li>
-          {{/each}}
-          <li class="info-text__rating">| {{release_date}}</li>
-          <li>{{vote_average}}</li>
-        </ul>
-      </div>
-    </article>
-  </a>
-</li>
-{{/each}} --}}
-
-
-
 {{#each this}}
 <li class="movies-item" data-action='{{id}}'>
   <a href="{{homepage}}" rel="noopener noreferrer">
@@ -33,8 +9,9 @@
       <div class="info">
         <h2 class="info-title">{{title}} {{name}}</h4>
           <p class="info-text">
-            <span>{{#each genres}} {{name}} {{/each}}</span> | <span>{{release_date}}</span> <span
-              class="info-text__rating">{{vote_average}}</span>
+            <span class="info-text__genre">{{#each genres}} {{name}}{{#unless @last}},{{/unless}}{{/each}} |
+              {{release_date}}</span>
+            <span class="info-text__rating">{{vote_average}}</span>
           </p>
       </div>
     </article>
