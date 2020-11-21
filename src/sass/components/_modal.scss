@@ -1,164 +1,369 @@
 // Хедер модалки
 
-.modal-container {
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
+// .modal-container {
+//   padding: 10px;
+//   margin-left: auto;
+//   margin-right: auto;
 
-  @media screen and (min-width: $mobile) {
-    max-width: 300px;
-  }
+//   @media screen and (min-width: $mobile) {
+//     max-width: 300px;
+//   }
 
-  @media screen and (min-width: $tablet) {
-    max-width: 668px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+//   @media screen and (min-width: $tablet) {
+//     max-width: 668px;
+//     padding-left: 25px;
+//     padding-right: 25px;
+//   }
 
-  @media screen and (min-width: $desktop) {
-    max-width: 932px;
-    padding-left: 71px;
-    padding-right: 71px;
-  }
-}
-
-.header-modal-section {
-  padding-top: 58px;
-  padding-bottom: 158px;
-}
-
-.madal-header {
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-
-  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/modal-header/mobil.jpg);
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url(../images/modal-header/mobil@2x.jpg);
-  }
-
-  @media screen and (min-device-pixel-ratio: 3),
-    screen and (min-resolution: 3dppx),
-    screen and (min-resolution: 288dpi) {
-    background-image: url(../images/modal-header/mobil@3x.jpg);
-  }
-
-  @media screen and (min-width: $tablet) {
-    background-image: url(../images/modal-header/tablet.jpg);
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../images/modal-header/tablet@2x.jpg);
-    }
-
-    @media screen and (min-device-pixel-ratio: 3),
-      screen and (min-resolution: 3dppx),
-      screen and (min-resolution: 288dpi) {
-      background-image: url(../images/modal-header/tablet@3x.jpg);
-    }
-  }
-
-  @media screen and (min-width: $desktop) {
-    background-image: url(../images/modal-header/desktop.jpg);
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../images/modal-header/desktop@2x.jpg);
-    }
-
-    @media screen and (min-device-pixel-ratio: 3),
-      screen and (min-resolution: 3dppx),
-      screen and (min-resolution: 288dpi) {
-      background-image: url(../images/modal-header/desktop@3x.jpg);
-    }
-  }
-}
-
-// .logo-navigation {
-//   position: absolute;
-//   top: 46px;
+//   @media screen and (min-width: $desktop) {
+//     max-width: 932px;
+//     padding-left: 71px;
+//     padding-right: 71px;
+//   }
 // }
 
-// .logo-film {
+// .header-modal-section {
+//   padding-top: 58px;
+//   padding-bottom: 158px;
 // }
 
-// Тело Модалки
+// .madal-header {
+//   margin-right: auto;
+//   margin-left: auto;
+//   width: 100%;
 
-.modal-section-card {
-  padding-top: 20px;
-  padding-bottom: 40px;
+//   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+//     url(../images/modal-header/mobil.jpg);
 
-  @media screen and (min-width: $tablet) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+
+//   @media screen and (min-device-pixel-ratio: 2),
+//     screen and (min-resolution: 192dpi),
+//     screen and (min-resolution: 2dppx) {
+//     background-image: url(../images/modal-header/mobil@2x.jpg);
+//   }
+
+//   @media screen and (min-device-pixel-ratio: 3),
+//     screen and (min-resolution: 3dppx),
+//     screen and (min-resolution: 288dpi) {
+//     background-image: url(../images/modal-header/mobil@3x.jpg);
+//   }
+
+//   @media screen and (min-width: $tablet) {
+//     background-image: url(../images/modal-header/tablet.jpg);
+
+//     @media screen and (min-device-pixel-ratio: 2),
+//       screen and (min-resolution: 192dpi),
+//       screen and (min-resolution: 2dppx) {
+//       background-image: url(../images/modal-header/tablet@2x.jpg);
+//     }
+
+//     @media screen and (min-device-pixel-ratio: 3),
+//       screen and (min-resolution: 3dppx),
+//       screen and (min-resolution: 288dpi) {
+//       background-image: url(../images/modal-header/tablet@3x.jpg);
+//     }
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     background-image: url(../images/modal-header/desktop.jpg);
+
+//     @media screen and (min-device-pixel-ratio: 2),
+//       screen and (min-resolution: 192dpi),
+//       screen and (min-resolution: 2dppx) {
+//       background-image: url(../images/modal-header/desktop@2x.jpg);
+//     }
+
+//     @media screen and (min-device-pixel-ratio: 3),
+//       screen and (min-resolution: 3dppx),
+//       screen and (min-resolution: 288dpi) {
+//       background-image: url(../images/modal-header/desktop@3x.jpg);
+//     }
+//   }
+// }
+
+// // .logo-navigation {
+// //   position: absolute;
+// //   top: 46px;
+// // }
+
+// // .logo-film {
+// // }
+
+// // Тело Модалки
+
+// .modal-section-card {
+//   padding-top: 20px;
+//   padding-bottom: 40px;
+
+//   @media screen and (min-width: $tablet) {
+//     padding-top: 60px;
+//     padding-bottom: 60px;
+//   }
+// }
+
+// .modal-card-image {
+//   margin-bottom: 30px;
+//   width: 280px;
+//   height: 416px;
+//   border-radius: 5px;
+
+//   @media screen and (min-width: $tablet) {
+//     margin-bottom: 0px;
+//     width: 294px;
+
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 0;
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     width: 426px;
+//     height: 514px;
+//   }
+// }
+
+// .card-list-wrapper {
+//   @media screen and (min-width: $tablet) {
+//     margin-left: 30px;
+//   }
+// }
+
+// .modal-card-title {
+//   font-size: 20px;
+//   font-weight: 500;
+//   line-height: 23.44px;
+//   color: rgb(0, 0, 0);
+//   text-transform: uppercase;
+
+//   margin-bottom: 20px;
+
+//   @media screen and (min-width: $tablet) {
+//     font-size: 30px;
+//     line-height: 35.16px;
+//   }
+// }
+
+// .modal-card-list {
+//   margin-bottom: 20px;
+
+//   font-size: 12px;
+//   font-weight: 500;
+//   line-height: 1.33;
+//   color: #8d8d8d;
+// }
+
+// .modal-vote {
+//   display: inline-block;
+//   margin-left: 41px;
+//   margin-right: 3px;
+//   background-color: rgb(255, 107, 8);
+//   width: 38px;
+//   height: 18px;
+//   border-radius: 5px;
+//   color: rgb(255, 255, 255);
+//   text-align: center;
+//   line-height: 18px;
+
+//   @media screen and (min-width: $desktop) {
+//     max-width: 668px;
+//     margin-left: 85px;
+//   }
+// }
+
+// .modal-votes {
+//   margin-left: 3px;
+//   color: rgb(0, 0, 0);
+// }
+
+// .modal-text-popularity {
+//   margin-left: 53px;
+//   color: rgb(0, 0, 0);
+
+//   @media screen and (min-width: $desktop) {
+//     margin-left: 97px;
+//   }
+// }
+
+// .modal-text-title {
+//   margin-left: 39px;
+//   text-transform: uppercase;
+//   line-height: 1.33;
+//   color: rgb(0, 0, 0);
+
+//   @media screen and (min-width: $desktop) {
+//     margin-left: 83px;
+//   }
+// }
+
+// .modal-genre {
+//   //   display: inline-block;
+//   margin-left: 76px;
+
+//   @media screen and (min-width: $desktop) {
+//     margin-left: 120px;
+//   }
+// }
+
+// .modal-text-title {
+//   margin-bottom: 10px;
+//   font-size: 12px;
+//   font-weight: 500;
+//   color: rgb(0, 0, 0);
+//   text-transform: uppercase;
+//   line-height: 1.33;
+// }
+
+// .modal-card-text {
+//   margin-bottom: 40px;
+//   font-weight: 500;
+//   font-size: 12px;
+//   color: rgb(0, 0, 0);
+//   line-height: 1.67;
+
+//   @media screen and (min-width: $tablet) {
+//     margin-bottom: 20px;
+//   }
+// }
+
+// .modal-btn {
+//   display: flex;
+//   text-align: center;
+// }
+
+// .modal-button {
+//   padding: 0 15px;
+//   font-size: 12px;
+//   color: rgb(0, 0, 0);
+//   text-transform: uppercase;
+//   line-height: 1.333;
+//   text-align: center;
+//   height: 44px;
+//   border: 1px solid rgb(0, 0, 0);
+//   background-color: rgb(255, 255, 255);
+//   border-radius: 5px;
+//   width: 134px;
+// }
+
+// .modal-button:not(:last-child) {
+//   margin-right: 15px;
+// }
+
+// .modal-button:hover {
+//   background-color: rgb(255, 107, 8);
+//   color: rgb(255, 255, 255);
+//   border: 0;
+// }
+
+// // Футер модалки
+
+// .footer {
+//   background-color: $background-primary-color;
+//   font-family: Roboto;
+//   color: $footer-text-color;
+//   text-align: center;
+//   padding-bottom: 28px;
+//   padding-top: 30px;
+// }
+
+// .footer-copy {
+//   margin: 0px;
+//   font-size: 14px;
+//   line-height: 1.14;
+
+//   @media screen and (min-width: $mobile) {
+//     max-width: 300px;
+//   }
+
+//   @media screen and (min-width: $tablet) {
+//     font-size: 16px;
+//     line-height: 1.19;
+//     max-width: 668px;
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     max-width: 932px;
+//   }
+
+//   @media screen and (max-width: $mobile) {
+//     font-size: 14px;
+//     line-height: 1.14;
+//   }
+// }
+
+// .icon-heart {
+//   width: 14px;
+//   height: 13px;
+//   margin-left: 10px;
+//   margin-right: 10px;
+// }
+
+// .footer-link {
+//   text-decoration: none;
+// }
+
+@media screen and (min-width: 320px) {
+  .modal-card {
+    background-color: #ffffff;
+    width: 300px;
+    cursor: pointer;
+    margin-top: 450px;
   }
 }
 
-.modal-card-image {
-  margin-bottom: 30px;
-  width: 280px;
-  height: 416px;
+.genres {
+  display: flex;
+}
+
+.image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  width: 260px;
+  height: 404px;
   border-radius: 5px;
-
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 0px;
-    width: 294px;
-
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 426px;
-    height: 514px;
-  }
 }
 
-.card-list-wrapper {
-  @media screen and (min-width: $tablet) {
-    margin-left: 30px;
-  }
+.cardItem-wrapper {
+  padding: 32px 20px 36px;
 }
 
-.modal-card-title {
+.cardItem-name {
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 20px;
   font-weight: 500;
-  line-height: 23.44px;
+  line-height: 30px;
+  letter-spacing: 50;
   color: rgb(0, 0, 0);
+  margin-bottom: 18px;
   text-transform: uppercase;
-
-  margin-bottom: 20px;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 30px;
-    line-height: 35.16px;
-  }
 }
 
-.modal-card-list {
-  margin-bottom: 20px;
-
+.cardItem-wrapper p {
+  display: flex;
   font-size: 12px;
-  font-weight: 500;
-  line-height: 1.33;
+  font-family: 'Roboto';
+  line-height: 1.333;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.cardItem-genreList {
+  list-style: disc;
+  display: block;
+}
+
+.cardItem-text {
   color: #8d8d8d;
 }
 
-.modal-vote {
+.cardItem-vote-average {
   display: inline-block;
-  margin-left: 41px;
-  margin-right: 3px;
+  margin-left: 50px;
+  margin-right: 7px;
   background-color: rgb(255, 107, 8);
   width: 38px;
   height: 18px;
@@ -166,76 +371,59 @@
   color: rgb(255, 255, 255);
   text-align: center;
   line-height: 18px;
-
-  @media screen and (min-width: $desktop) {
-    max-width: 668px;
-    margin-left: 85px;
-  }
 }
 
-.modal-votes {
-  margin-left: 3px;
+.cardItem-vote-count {
+  margin-left: 16px;
   color: rgb(0, 0, 0);
 }
 
-.modal-text-popularity {
-  margin-left: 53px;
+.cardItem-data {
+  margin-left: 63px;
   color: rgb(0, 0, 0);
-
-  @media screen and (min-width: $desktop) {
-    margin-left: 97px;
-  }
 }
 
-.modal-text-title {
-  margin-left: 39px;
+.cardItem-title-data {
+  margin-left: 50px;
   text-transform: uppercase;
-  line-height: 1.33;
   color: rgb(0, 0, 0);
-
-  @media screen and (min-width: $desktop) {
-    margin-left: 83px;
-  }
 }
 
-.modal-genre {
-  //   display: inline-block;
-  margin-left: 76px;
-
-  @media screen and (min-width: $desktop) {
-    margin-left: 120px;
-  }
+.cardItem-genre {
+  display: inline-block;
+  margin-right: 90px;
 }
 
-.modal-text-title {
-  margin-bottom: 10px;
-  font-size: 12px;
-  font-weight: 500;
+.cardItem-genreList {
+  display: inline-block;
+  width: 135px;
+}
+
+.cardItem-genre-data {
   color: rgb(0, 0, 0);
+  margin-right: 5px;
+}
+
+.cardItem-about {
   text-transform: uppercase;
-  line-height: 1.33;
-}
-
-.modal-card-text {
-  margin-bottom: 40px;
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 700;
   color: rgb(0, 0, 0);
-  line-height: 1.67;
-
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 20px;
-  }
 }
 
-.modal-btn {
+.cardItem-description {
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+}
+
+.cardItem-listButton {
   display: flex;
   text-align: center;
 }
 
-.modal-button {
+.cardItem-button {
   padding: 0 15px;
   font-size: 12px;
+  font-family: 'Roboto', 'Arial', sans-serif;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
   line-height: 1.333;
@@ -247,59 +435,89 @@
   width: 134px;
 }
 
-.modal-button:not(:last-child) {
-  margin-right: 15px;
-}
-
-.modal-button:hover {
+.cardItem-button:hover {
   background-color: rgb(255, 107, 8);
   color: rgb(255, 255, 255);
   border: 0;
 }
 
-// Футер модалки
-
-.footer {
-  background-color: $background-primary-color;
-  font-family: Roboto;
-  color: $footer-text-color;
-  text-align: center;
-  padding-bottom: 28px;
-  padding-top: 30px;
+.cardItem-list {
+  list-style: none;
 }
 
-.footer-copy {
-  margin: 0px;
-  font-size: 14px;
-  line-height: 1.14;
-
-  @media screen and (min-width: $mobile) {
-    max-width: 300px;
+@media screen and (min-width: 768px) {
+  .modal-card {
+    background-color: #ffffff;
+    width: 720px;
+    margin-top: 0px;
+    cursor: pointer;
+    display: flex;
   }
 
-  @media screen and (min-width: $tablet) {
-    font-size: 16px;
-    line-height: 1.19;
-    max-width: 668px;
+  .image {
+    display: block;
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    border-radius: 5px;
   }
 
-  @media screen and (min-width: $desktop) {
-    max-width: 932px;
+  .cardItem {
+    display: flex;
   }
 
-  @media screen and (max-width: $mobile) {
-    font-size: 14px;
-    line-height: 1.14;
+  .cardItem-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .cardItem-wrapper {
+    width: 370px;
+    padding: 10px;
+    margin-left: 30px;
+  }
+
+  .cardItem-image {
+    width: 295px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+  }
+
+  .cardItem-name {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .cardItem-button:not(:last-child) {
+    margin-right: 16px;
   }
 }
 
-.icon-heart {
-  width: 14px;
-  height: 13px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
+@media (min-width: 1024px) {
+  .modal-card {
+    background-color: #ffffff;
+    width: 810px;
+    margin-top: 0px;
+    display: flex;
+  }
+  .image {
+    display: block;
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    border-radius: 5px;
+  }
 
-.footer-link {
-  text-decoration: none;
+  .cardItem-wrapper {
+    width: 423px;
+  }
+
+  .cardItem-genreList {
+    width: 290px;
+  }
+
+  .cardItem-button {
+    width: 170px;
+  }
 }
