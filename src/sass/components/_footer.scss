@@ -67,11 +67,13 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
-  height: 30px;
+  // width: auto;
+  // height: auto;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: none;
+  // border: 1px solid rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
+  padding: 0px;
   /* box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12); */
           transform: translate(-100%, 100%);
@@ -79,8 +81,19 @@
 }
 
 .svg-close {
-  width: 11px;
-  height: 11px;
+  fill: #b4b4b4;
+  // opacity: 50%;
+  width: 30px;
+  height: 30px;
+  vertical-align:top;
+}
+
+
+.svg-close:hover, .svg-close:focus {
+  fill: #ffffff;
+  background-color: lightcoral;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 105, 105, 0.5);
 }
 
 /* TEAM-COMMAND */
@@ -89,7 +102,7 @@
 }
 
 .command__title {
-  color: #212121;
+  color: #464646;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -138,7 +151,8 @@
 }
 
 .person__text {
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 300;
   line-height: 1.19;
   text-align: center;
   margin: 0px;
@@ -149,7 +163,7 @@
 
   display: flex;
           justify-content: space-evenly;
-          padding-bottom: 10px;
+          padding-bottom: 5px;
 }
 
 .social__link {
@@ -166,28 +180,10 @@
 
 .social__link:hover, .social__link:focus {
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: lightcoral;
 }
 
-.svg-insta {
-  fill: currentColor;
-  width: 20px;
-  height: 20px;
-}
-
-.svg-faceb {
-  fill: currentColor;
-  width: 20px;
-  height: 20px;
-}
-
-.svg-twit {
-  fill: currentColor;
-  width: 20px;
-  height: 20px;
-}
-
-.svg-linked {
+.svg-icon {
   fill: currentColor;
   width: 20px;
   height: 20px;
