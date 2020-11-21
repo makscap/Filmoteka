@@ -1,5 +1,5 @@
 import * as basicLightbox from 'basiclightbox';
-import 'basiclightbox/dist/basicLightbox.min.css';
+// import 'basiclightbox/dist/basicLightbox.min.css';
 
 import modalCard from '../templates/modal.hbs';
 
