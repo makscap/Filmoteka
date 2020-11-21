@@ -19,12 +19,11 @@
     </div>
 </article> --}}
 
-<div class="modal-card" data-action="{{id}}">
+<article class="modal-card" data-action="{{id}}">
     <div class="cardItem-image">
         <img class="image" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}}"
             onerror="this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';" />
     </div>
-
     <div class=" cardItem-wrapper">
         <h2 class="cardItem-name">{{title}}</h2>
         <p class="cadrItem-vote cardItem-text">
@@ -34,16 +33,14 @@
         <p class="cardItem-popularity cardItem-text">
             Popularity<span class="cardItem-data">{{popularity}}</span>
         </p>
-        <p class="cardItem-Title cardItem-text">
+        <p class="cardItem-text">
             Original Title<span class="cardItem-title-data">{{original_title}}</span>
         </p>
         <div class="genres">
             <p class="cardItem-genre cardItem-text">
                 Genre
             </p>
-            <p class="cardItem-genreList">{{#each genres}}
-                <span class="cardItem-genre-data">{{this.name}}</span>
-                {{/each}}</p>
+            <p class="cardItem-genreList">{{#each genres}} {{name}}{{#unless @last}},{{/unless}}{{/each}}</p>
         </div>
         <p class="cardItem-about">About</p>
         <p class="cardItem-description">
@@ -54,4 +51,4 @@
             <button type="button" class="modal-button">QUEUE</button>
         </div>
     </div>
-</div>
+</article>

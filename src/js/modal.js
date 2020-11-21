@@ -1,5 +1,5 @@
 import * as basicLightbox from 'basiclightbox';
-import 'basiclightbox/dist/basicLightbox.min.css';
+// import 'basiclightbox/dist/basicLightbox.min.css';
 
 import modalCard from '../templates/modal.hbs';
 
@@ -28,7 +28,7 @@ function openModal(e) {
         if (e.target.nodeName !== 'IMG') 
             return;
         
-const markup = modalCard(data);
+      const markup = modalCard(data);
       const modal = basicLightbox.create(markup);
 
       modal.show();
