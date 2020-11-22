@@ -1,4 +1,4 @@
-import storage from './storage';
+// import storage from './storage';
 
 let btnWatched = null;
 let btnQueue = null;
