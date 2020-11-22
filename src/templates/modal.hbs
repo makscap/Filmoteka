@@ -23,12 +23,13 @@
                 <td class="cardItem-text">Genre</td>
                 <td class="cardItem-genreList">{{#each genres}} {{name}}{{#unless @last}},{{/unless}}{{/each}}</td>
             </tr>
+            <td class="cardItem-text">Trailer</td>
+            <td><button class="youtube"></button></td>
         </table>
         <p class="cardItem-about">About</p>
         <p class="cardItem-description">
             {{overview}}
         </p>
-        {{!-- <div></div> --}}
         <div class="modal-buttons">
             <button type="button" class="modal-button">WATCHED</button>
             <button type="button" class="modal-button">QUEUE</button>
