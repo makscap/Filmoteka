@@ -2,7 +2,7 @@ import * as basicLightbox from 'basiclightbox';
 
 import modalCard from '../templates/modal.hbs';
 
-import { onModalButtons } from './initStorage'
+import { onModalButtons } from './addToWatchedQueue'
 
 const apiKey = 'b4c2f63def68e49abedf5a34ac5e443b';
 
@@ -33,6 +33,7 @@ function openModal(e) {
       const modal = basicLightbox.create(markup);
 
       modal.show();
+
       openTrailerModal();
 
     window.addEventListener('keydown', closeModal);
@@ -53,6 +54,7 @@ function openModal(e) {
 }
 
 
+
 function openTrailerModal() {
   const trailerBtn = document.querySelector('.youtube');
   trailerBtn.addEventListener("click", (e) => {
@@ -60,22 +62,22 @@ function openTrailerModal() {
   });
 }
 
-function modalForTrailler(movie_id) {
-  const url = `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${apiKey}&language=en-US`;
-  // console.log(url)
+function modalForTrailler(id) {
+  const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}&language=en-US`;
+  console.log(url)
     fetch(url)
       .then(response => response.json())
       .then(data => {
         const id = data.results[0].key;
         const instance = basicLightbox.create(`
-  <iframe width="560" height="315" src='https://www.youtube.com/embed/${id}'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="315" height="315" src='https://www.youtube.com/embed/${id}'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 `);
         instance.show();
         modalClBtTrailer(instance);
       })
       .catch(() => {
         const instance = basicLightbox.create(`
-    <iframe width="560" height="315" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="315" height="315" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `);
 
         instance.show();

@@ -24,7 +24,7 @@
                 <td class="cardItem-genreList">{{#each genres}} {{name}}{{#unless @last}},{{/unless}}{{/each}}</td>
             </tr>
             <td class="cardItem-text">Trailer</td>
-            <td><button class="youtube"></button></td>
+            <td><button data-id={{id}} class="youtube"></button></td>
         </table>
         <p class="cardItem-about">About</p>
         <p class="cardItem-description">
