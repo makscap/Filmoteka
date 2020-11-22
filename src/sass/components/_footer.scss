@@ -124,6 +124,7 @@
 
 .modal__button-close {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   width: 30px;
