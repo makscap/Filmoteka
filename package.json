@@ -7,7 +7,7 @@
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "server": "json-server --watch db.json -p 4040 -d 300",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build -- --public-url /Filmoteka/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
