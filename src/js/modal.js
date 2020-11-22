@@ -2,6 +2,8 @@ import * as basicLightbox from 'basiclightbox';
 
 import modalCard from '../templates/modal.hbs';
 
+import { onModalButtons } from './initStorage'
+
 const apiKey = 'b4c2f63def68e49abedf5a34ac5e443b';
 
 const cardFilm = document.querySelector(".movies-list");
@@ -40,7 +42,9 @@ function openModal(e) {
     modal.close();
         window.removeEventListener('keydown', closeModal);
         }
-        }
+    }
+      
+       onModalButtons();
     })
     .then(data => {})
     .catch(error => {
@@ -57,10 +61,11 @@ function openTrailerModal() {
 }
 
 function modalForTrailler(movie_id) {
-    const url = `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${apiKey}&language=en-US`;
+  const url = `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${apiKey}&language=en-US`;
+  // console.log(url)
     fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
+      .then(response => response.json())
+      .then(data => {
         const id = data.results[0].key;
         const instance = basicLightbox.create(`
   <iframe width="560" height="315" src='https://www.youtube.com/embed/${id}'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -95,3 +100,4 @@ function modalForTrailler(movie_id) {
     modalCloseBtn.addEventListener('click', () => instance.close());
   }
 
+  
