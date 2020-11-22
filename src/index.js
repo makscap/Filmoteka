@@ -5,3 +5,4 @@ import "./js/search-movies";
 import './js/modal';
 import './js/paginator';
 import "./js/draw-page";
+import "./js/button-up";
