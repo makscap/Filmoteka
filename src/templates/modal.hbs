@@ -1,51 +1,34 @@
-{{!-- <article class="modal-section-card">
-    <img class="modal-card-image" src="{{poster_path}}" alt="{{original_title}} movie poster" width="274">
-    <div class="card-list-wrapper">
-        <h2 class="modal-card-title">{{original_title}}</h2>
-        <ul class="modal-card-list">
-            <li>Vote / Votes<span class="modal-vote">{{vote_average}}</span> /
-                <span class="modal-votes">{{vote_count}}</span></li>
-            <li>Popularity<span class="modal-text-popularity">{{popularity}}</span></li>
-            <li>Original Title<span class="modal-text-title">{{original_title}}</span></li>
-            {{#each genres}}
-            <li>Genre<span class="modal-genre">{{genre_ids}}</span></li>
-            {{/each}}
-        </ul>
-        <p class="modal-text-title">About<span class="modal-card-text">{{overview}}</span></p>
-        <div class="modal-btn">
-            <button class="modal-button">Watched</button>
-            <button class="modal-button">queue</button>
-        </div>
-    </div>
-</article> --}}
-
 <article class="modal-card" data-action="{{id}}">
     <div class="cardItem-image">
         <img class="image" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}}"
             onerror="this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';" />
     </div>
-    <div class=" cardItem-wrapper">
+    <div class="cardItem-wrapper">
         <h2 class="cardItem-name">{{title}}</h2>
-        <p class="cadrItem-vote cardItem-text">
-            Vote / Votes<span class="cardItem-vote-average">{{vote_average}}</span>/<span
-                class="cardItem-vote-count">{{vote_count}}</span>
-        </p>
-        <p class="cardItem-popularity cardItem-text">
-            Popularity<span class="cardItem-data">{{popularity}}</span>
-        </p>
-        <p class="cardItem-text">
-            Original Title<span class="cardItem-title-data">{{original_title}}</span>
-        </p>
-        <div class="genres">
-            <p class="cardItem-genre cardItem-text">
-                Genre
-            </p>
-            <p class="cardItem-genreList">{{#each genres}} {{name}}{{#unless @last}},{{/unless}}{{/each}}</p>
-        </div>
+        <table class="table-style">
+            <tr>
+                <td class="cardItem-text">Vote / Votes</td>
+                <td><span class="vote-average">{{vote_average}}</span>/<span class="vote-count">{{vote_count}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cardItem-text">Popularity</td>
+                <td>{{popularity}}</td>
+            </tr>
+            <tr>
+                <td class="cardItem-text">Original Title</td>
+                <td class="cardItem-title-data">{{original_title}}</td>
+            </tr>
+            <tr>
+                <td class="cardItem-text">Genre</td>
+                <td class="cardItem-genreList">{{#each genres}} {{name}}{{#unless @last}},{{/unless}}{{/each}}</td>
+            </tr>
+        </table>
         <p class="cardItem-about">About</p>
         <p class="cardItem-description">
             {{overview}}
         </p>
+        {{!-- <div></div> --}}
         <div class="modal-buttons">
             <button type="button" class="modal-button">WATCHED</button>
             <button type="button" class="modal-button">QUEUE</button>
