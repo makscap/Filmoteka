@@ -18,7 +18,7 @@ border-radius: 50%;
 padding: .25em;
 width: 80px;
 height: 80px;
-  background-color: #F8F8F8;
+  background-color: #FF6B08;
   
   &.show {
     visibility: visible;
@@ -37,7 +37,7 @@ height: 12px;
 }
 
 &:hover {
-background-color: #E8E8E8;
+background-color: #FF6B08;;
 
 svg {
 fill: #FF6B08;
@@ -91,6 +91,8 @@ clip: auto !important;
   @media screen and (max-width: 767px) {
     width: 50px;
     height: 50px;
+    right: -47px;
+    background-color: transparent;
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     width: 60px;
@@ -117,12 +119,3 @@ clip: auto !important;
   text-align: center;
 }
 
-.back-top a:hover {
-  background: $button-bg-color;
-  -webkit-transition: all linear 0.2s;
-  -moz-transition: all linear 0.2s;
-  -ms-transition: all linear 0.2s;
-  -o-transition: all linear 0.2s;
-  transition: all linear 0.2s;
-  color: #fff;
-}
