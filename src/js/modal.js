@@ -10,7 +10,6 @@ const cardFilm = document.querySelector(".movies-list");
 
 cardFilm.addEventListener('click', openModal);
 
-
 function fetchOneMovieInfo(movie_id) {
   const url = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}`;
   return fetch(url)
@@ -34,7 +33,13 @@ function openModal(e) {
 
       modal.show();
 
-      openTrailerModal();
+      const modalDisabled = document.querySelector('.basicLightbox');
+
+      if (openTrailerModal()) {
+        modalDisabled.hidden = true;
+      }
+
+      //  onModalButtons();
 
     window.addEventListener('keydown', closeModal);
         
@@ -44,8 +49,6 @@ function openModal(e) {
         window.removeEventListener('keydown', closeModal);
         }
     }
-      
-       onModalButtons();
     })
     .then(data => {})
     .catch(error => {
@@ -53,53 +56,45 @@ function openModal(e) {
     });
 }
 
-
-
 function openTrailerModal() {
   const trailerBtn = document.querySelector('.youtube');
   trailerBtn.addEventListener("click", (e) => {
     modalForTrailler(e.target.dataset.id);
   });
+  
 }
 
 function modalForTrailler(id) {
   const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}&language=en-US`;
-  console.log(url)
     fetch(url)
       .then(response => response.json())
       .then(data => {
         const id = data.results[0].key;
         const instance = basicLightbox.create(`
-  <iframe width="315" height="315" src='https://www.youtube.com/embed/${id}'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="515" height="315" src='https://www.youtube.com/embed/${id}'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 `);
         instance.show();
-        modalClBtTrailer(instance);
+        modalClTrailer(instance);
       })
       .catch(() => {
         const instance = basicLightbox.create(`
-    <iframe width="315" height="315" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="515" height="315" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       `);
 
         instance.show();
-        modalClBtTrailer(instance);
+        modalClTrailer(instance);
       });
   }
 
-  function modalClBtTrailer(instance) {
-    const modalBox = document.querySelector('.basicLightbox--iframe');
-    modalBox.insertAdjacentHTML(
-      'afterbegin',
-      `<button
-        type="button"
-        class="lightbox__button"
-        data-action="close-lightbox"
-        ></button>
-    `
-    );
-    const modalCloseBtn = document.querySelector(
-      '[data-action="close-lightbox"]'
-    );
-    modalCloseBtn.addEventListener('click', () => instance.close());
+function modalClTrailer(instance) {
+  window.addEventListener('keydown', closeModal);
+  
+  function closeModal(e) {
+    if (e.code === 'Escape') {
+    instance.close();
+        window.removeEventListener('keydown', closeModal);
+        }
+    }
   }
 
-  
+
